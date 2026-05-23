@@ -1,0 +1,152 @@
+[
+    {
+        "id": "roi_basic",
+        "input": "I bought a stock at $120 and sold it at $150. What is my ROI?",
+        "eval_type": "exact",
+        "expected": "25%",
+        "tags": [
+            "calculation",
+            "roi"
+        ]
+    },
+    {
+        "id": "roi_loss",
+        "input": "I bought shares at $200 and sold at $160. What is my ROI?",
+        "eval_type": "exact",
+        "expected": "-20%",
+        "tags": [
+            "calculation",
+            "roi"
+        ]
+    },
+    {
+        "id": "roi_decimal",
+        "input": "I invested $1500 and got back $1800. What is my return on investment as a percentage?",
+        "eval_type": "exact",
+        "expected": "20%",
+        "tags": [
+            "calculation",
+            "roi"
+        ]
+    },
+    {
+        "id": "percent_change_up",
+        "input": "A stock moved from $80 to $100. What is the percentage change?",
+        "eval_type": "exact",
+        "expected": "25%",
+        "tags": [
+            "calculation",
+            "percent_change"
+        ]
+    },
+    {
+        "id": "percent_change_down",
+        "input": "A stock dropped from $250 to $200. What is the percentage change?",
+        "eval_type": "exact",
+        "expected": "-20%",
+        "tags": [
+            "calculation",
+            "percent_change"
+        ]
+    },
+    {
+        "id": "pe_ratio_calc",
+        "input": "A company has a stock price of $60 and earnings per share of $4. What is the P/E ratio?",
+        "eval_type": "exact",
+        "expected": "15",
+        "tags": [
+            "calculation",
+            "pe_ratio"
+        ]
+    },
+    {
+        "id": "pe_ratio_calc_2",
+        "input": "Stock price is $90, EPS is $6. Calculate the price-to-earnings ratio.",
+        "eval_type": "exact",
+        "expected": "15",
+        "tags": [
+            "calculation",
+            "pe_ratio"
+        ]
+    },
+    {
+        "id": "portfolio_value",
+        "input": "I own 50 shares of a stock priced at $34.50. What is the total value of my position?",
+        "eval_type": "exact",
+        "expected": "$1725.00",
+        "tags": [
+            "calculation",
+            "portfolio"
+        ]
+    },
+    {
+        "id": "stock_price_aapl",
+        "input": "What is the current stock price of Apple (AAPL)?",
+        "eval_type": "judge",
+        "expected": "The answer must include a specific numeric price in USD for AAPL. The agent must have used the get_stock_price tool with ticker AAPL. The price should be a plausible value (between $50 and $1000).",
+        "tags": [
+            "live_data",
+            "stock_price"
+        ]
+    },
+    {
+        "id": "stock_price_msft",
+        "input": "What is the current price of Microsoft stock?",
+        "eval_type": "judge",
+        "expected": "The answer must include a specific numeric price in USD for MSFT. The agent must have used the get_stock_price tool with ticker MSFT. The price should be a plausible value (between $50 and $2000).",
+        "tags": [
+            "live_data",
+            "stock_price"
+        ]
+    },
+    {
+        "id": "stock_price_googl",
+        "input": "How much does one share of Alphabet (Google) cost right now?",
+        "eval_type": "judge",
+        "expected": "The answer must include a specific numeric price in USD for GOOGL. The agent must have called get_stock_price. The price should be a plausible value (between $50 and $5000).",
+        "tags": [
+            "live_data",
+            "stock_price"
+        ]
+    },
+    {
+        "id": "pe_ratio_live_aapl",
+        "input": "What is the P/E ratio of Apple?",
+        "eval_type": "judge",
+        "expected": "The answer must include a specific numeric P/E ratio for AAPL. The agent must have used get_financial_ratios or get_stock_info for AAPL. The P/E ratio should be a plausible value (between 5 and 200).",
+        "tags": [
+            "live_data",
+            "pe_ratio"
+        ]
+    },
+    {
+        "id": "pe_ratio_live_msft",
+        "input": "What is Microsoft's price-to-earnings ratio?",
+        "eval_type": "judge",
+        "expected": "The answer must include a specific numeric P/E ratio for MSFT. The agent must have used get_financial_ratios or get_stock_info for MSFT. The value should be between 5 and 200.",
+        "tags": [
+            "live_data",
+            "pe_ratio"
+        ]
+    },
+    {
+        "id": "company_info_ticker",
+        "input": "What sector does Tesla operate in?",
+        "eval_type": "judge",
+        "expected": "The answer must correctly identify Tesla's sector (Consumer Cyclical or Automotive). The agent must have called get_stock_info with ticker TSLA.",
+        "tags": [
+            "live_data",
+            "company_info"
+        ]
+    },
+    {
+        "id": "market_cap",
+        "input": "What is the market cap of NVIDIA?",
+        "eval_type": "judge",
+        "expected": "The answer must include a numeric market cap for NVDA in USD. The agent must have used get_stock_info for NVDA. The value should be in the hundreds of billions or trillions range.",
+        "tags": [
+            "live_data",
+            "market_cap"
+        ]
+    }
+]
